@@ -1,0 +1,25 @@
+
+// Creación equipo
+db.Equipo.insertOne({ 
+  "NombreEquipo": "Deportivo Bogotá"
+});
+
+
+//Actualización datos equipos
+db.Equipo.updateOne(
+    { 
+        "_id" : ObjectId("632fcd58b10fb6c75cfcac5b")
+    },
+    { 
+        $set: {
+            "NombreEquipo" : "Equipo Deportivo Bogotá"
+        }
+    }
+ );
+
+//Eliminar equipo
+db.Equipo.deleteOne( 
+{ 
+   "_id" : ObjectId("632fcd58b10fb6c75cfcac5b") 
+} 
+);

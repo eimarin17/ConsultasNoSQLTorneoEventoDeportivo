@@ -1,0 +1,7 @@
+
+
+// Ranking equipos con mayor cantidad de puntos, de mayor a menor
+db.TablaPosiciones.find().sort(
+{TotalPuntos:-1}
+);
+

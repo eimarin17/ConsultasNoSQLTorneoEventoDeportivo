@@ -1,0 +1,38 @@
+
+// Creación jugador y asociación a equipo
+db.Jugador.insertOne(
+{  
+  "Nombres": "Camilo",
+  "Apellidos": "Ruiz",
+  "TipoIdentificacion": "CC",
+  "NumeroIdentificacion": "87654321",
+  "EquipoID": "632fcf99b10fb6c75cfcac5c",
+  "Edad": 26
+}
+);
+
+
+//Actualizar equipo a un jugador
+db.Jugador.updateOne(
+    { 
+        "_id" : ObjectId("632fd0a0b10fb6c75cfcac5e")
+    },
+    { 
+        $set: {
+            "EquipoID" : "632be27c50797f0c1d63bdef"
+        }
+    }
+ );
+
+
+//Eliminar equipo a un jugador, para quede sin equipo
+db.Jugador.updateOne(
+ { 
+     "_id" : ObjectId("632fd0a0b10fb6c75cfcac5e")
+ },
+ { 
+     $set: {
+         "EquipoID" : ""
+     }
+ }
+);

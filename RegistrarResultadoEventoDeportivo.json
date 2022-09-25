@@ -1,0 +1,15 @@
+
+
+// Registrar evento deportivo a tabla de posiciones
+db.TablaPosiciones.updateOne(
+    { 
+        "_id" : ObjectId("632fd803b10fb6c75cfcac61")
+    },
+    { 
+        $set: {
+            "PartidosGanados" : "1",
+            "TotalPuntos": "3"
+        }
+    }
+ );
+

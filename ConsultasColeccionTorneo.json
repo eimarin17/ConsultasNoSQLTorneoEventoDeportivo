@@ -1,0 +1,9 @@
+
+// Creación del torneo
+db.Torneo.insertOne({ 
+    "NombreTorneo": "Inicio campeonato 2 - Julio a Noviembre",
+    "FechaInicio": "1/07/2022",
+    "FechaFin": "20/11/2022"
+  });
+
+

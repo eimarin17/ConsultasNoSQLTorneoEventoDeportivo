@@ -1,0 +1,32 @@
+
+// Creación encuentro deportivo
+db.EncuentroDeportivo.insertOne(
+{
+  "NombreEncuentro": "Deportivo Bogotá vs Equipo 17",
+  "EquipoID_1": "632fcf99b10fb6c75cfcac5c",
+  "EquipoID2": "632be27c50797f0c1d63bdef",
+  "ArbitroID": "632be5cd50797f0c1d63be18"
+}
+);
+
+
+
+//Modificar datos encuentro deportivo
+db.EncuentroDeportivo.updateOne(
+    { 
+        "_id" : ObjectId("632fd592b10fb6c75cfcac5f")
+    },
+    { 
+        $set: {
+            "NombreEncuentro" : "CLUB Deportivo Bogotá vs CLUB Equipo 17"
+        }
+    }
+ );
+
+
+//Eliminar encuentro deportivo
+db.EncuentroDeportivo.deleteOne( 
+{ 
+    "_id" : ObjectId("632fd592b10fb6c75cfcac5f") 
+} 
+);
